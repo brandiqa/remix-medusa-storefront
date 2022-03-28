@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply antialiased font-sans  text-gray-800 bg-gray-100;
+}
+
+body {
+  @apply flex flex-col min-h-screen overflow-x-hidden;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+/* Navlink active styling */
+a.active {
+  @apply font-bold text-gray-700;
+}
+
+/* Navlink animation classes */
+.nav_links > a:after {
+  @apply block pb-2 border-b-2 border-emerald-400 transition ease-in-out duration-300 origin-[0%_50%]  content-[""] scale-x-0;
+}
+
+a:hover:after {
+  @apply scale-x-100;
+}
