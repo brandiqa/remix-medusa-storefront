@@ -27,13 +27,9 @@ export default function Navbar() {
       </div>
 
       {/* Navigation Links */}
-      <div className="space-x-4 nav_links">
+      <div className="space-x-4">
         {links.map((link, index) => (
-          <NavLink
-            key={index}
-            to={link.url}
-            className="inline-block w-20 py-2 font-semibold text-center text-gray-500 hover:text-emerald-500"
-          >
+          <NavLink key={index} to={link.url} className="navlink">
             {link.label}
           </NavLink>
         ))}

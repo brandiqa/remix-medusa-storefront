@@ -2,13 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+Layout styling
+*/
 html {
-  @apply antialiased font-sans  text-gray-800 bg-gray-100;
+  @apply antialiased font-sans text-gray-800 bg-gray-100;
 }
 
 body {
   @apply flex flex-col min-h-screen overflow-x-hidden;
 }
+
+/*
+Typography styling
+*/
 
 h1 {
   @apply text-3xl font-bold;
@@ -18,16 +25,26 @@ h2 {
   @apply text-xl;
 }
 
-/* Navlink active styling */
-a.active {
-  @apply font-bold text-gray-700;
+p {
+  @apply text-gray-700;
 }
 
-/* Navlink animation classes */
-.nav_links > a:after {
+/*
+Navigation menu styling
+*/
+
+.navlink {
+  @apply inline-block w-20 py-2 font-semibold text-center text-gray-500 hover:text-emerald-500;
+}
+
+.navlink:after {
   @apply block pb-2 border-b-2 border-emerald-400 transition ease-in-out duration-300 origin-[0%_50%]  content-[""] scale-x-0;
 }
 
-a:hover:after {
+.navlink:hover:after {
   @apply scale-x-100;
+}
+
+a.active {
+  @apply font-bold text-gray-700;
 }
