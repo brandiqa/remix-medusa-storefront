@@ -7,7 +7,9 @@ export default function Layout({ children }) {
       <header className="border-b">
         <Navbar />
       </header>
-      <main className="container flex flex-grow mx-auto mt-8">{children}</main>
+      <main className="container flex justify-center flex-grow mx-auto">
+        {children}
+      </main>
       <Footer />
     </>
   );
