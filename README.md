@@ -1,12 +1,37 @@
-# Welcome to Remix!
+# REMIX + MEDUSA STOREFRONT STARTER PROJECT
 
+Starter Medusa StoreFront project built using Remix + Tailwind CSS.
+
+- [Medusa Docs](https://docs.medusajs.com/)
 - [Remix Docs](https://remix.run/docs)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs/)
+
+## Prerequisites
+
+You'll at least need to setup and run a [Medusa server](https://github.com/medusajs/medusa) before running this storefront project:
+
+```sh
+# Install Medusa CLI
+npm install -g @medusajs/medusa-cli
+
+# Initialize a new commerce store populated with data
+medusa new my-medusa-store --seed
+
+# Launch Medusa server in dev mode
+medusa develop
+```
+
+Running the above commands will have you running a complete commerce engine locally in just a few minutes. Do note the engine is headless and that you'll need [Medusa-Admin](https://github.com/medusajs/admin) for adminstration dashboard.
 
 ## Development
 
 From your terminal:
 
 ```sh
+# Install package dependencies
+npm install
+
+# Run storefront in dev mode
 npm run dev
 ```
 
