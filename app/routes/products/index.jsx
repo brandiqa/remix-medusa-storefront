@@ -1,5 +1,5 @@
-import { createClient } from "~/utils/client";
 import { json, useLoaderData } from "remix";
+import { createClient } from "~/utils/client";
 
 import ProductCard from "~/components/product-card";
 
