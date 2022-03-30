@@ -1,10 +1,10 @@
-// TODO: Allow users to select language
+// TODO: Detect user language
 const locale = "en-US";
 
 // TODO: Allow users to select region currency (usd | eur)
 const regionCurrency = "usd";
 
-// TODO: Create function for determining tax rate
+// TODO: Detect user currency/Allow currency selection (usd | eur)
 const taxRate = 0;
 
 export function formatPrice(variant) {
