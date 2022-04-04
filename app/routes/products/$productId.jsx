@@ -22,13 +22,17 @@ export default function ProductRoute() {
   };
 
   const handleQuantityChange = (action) => {
-    if (action === "inc") {
-      if (quantity < variant.inventory_quantity) setQuantity(quantity + 1);
-      return;
-    }
-    if (action === "dec") {
-      if (quantity <= 1) return;
-      setQuantity(quantity - 1);
+    switch (action) {
+      case "inc":
+        if (quantity < variant.inventory_quantity) setQuantity(quantity + 1);
+        break;
+
+      case "dec":
+        if (quantity > 1) setQuantity(quantity - 1);
+        break;
+
+      default:
+        break;
     }
   };
 
