@@ -14,6 +14,7 @@ export const loader = async ({ params }) => {
 export default function ProductRoute() {
   const product = useLoaderData();
   const [variant, setVariant] = useState(product.variants[0]);
+  const [image, setImage] = useState(product.images[0]);
   const [quantity, setQuantity] = useState(1);
 
   const handleVariantChange = (index) => {
@@ -36,11 +37,32 @@ export default function ProductRoute() {
     }
   };
 
+  const handleImageChange = (id) => {
+    setImage(product.images.find((img) => img.id === id));
+  };
+
   return (
     <div className="w-full">
       <div className="grid items-center md:grid-cols-2">
         <div>
-          <img className="w-full" src={product.thumbnail} alt={product.title} />
+          <img
+            className="w-full rounded-lg"
+            src={image.url}
+            alt={product.title}
+          />
+          <div className="flex justify-center p-4 space-x-2">
+            {product.images.map((imageItem) => (
+              <img
+                className={`w-16 border-2 rounded-lg ${
+                  imageItem.id === image.id ? "border-teal-400" : null
+                }`}
+                key={imageItem.id}
+                src={imageItem.url}
+                alt={product.title}
+                onClick={() => handleImageChange(imageItem.id)}
+              />
+            ))}
+          </div>
         </div>
         <div className="flex flex-col px-16 py-4 space-y-8">
           <h1>{product.title} </h1>

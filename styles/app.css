@@ -6,7 +6,7 @@
 Layout styling
 */
 html {
-  @apply antialiased font-sans text-gray-800 bg-gray-100;
+  @apply antialiased font-sans text-gray-800 bg-gray-200;
 }
 
 body {
