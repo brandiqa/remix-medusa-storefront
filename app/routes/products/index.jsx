@@ -1,6 +1,7 @@
-import { json, useLoaderData } from "remix";
-import { createClient } from "~/utils/client";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 
+import { createClient } from "~/utils/client";
 import ProductCard from "~/components/product-card";
 
 export const loader = async () => {

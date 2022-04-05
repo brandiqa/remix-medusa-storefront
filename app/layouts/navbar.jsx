@@ -1,4 +1,4 @@
-import { Link, NavLink } from "remix";
+import { Link, NavLink } from "@remix-run/react";
 import { BiShoppingBag } from "react-icons/bi";
 
 export default function Navbar() {

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { json, useLoaderData } from "remix";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { BiShoppingBag } from "react-icons/bi";
 
 import { createClient } from "~/utils/client";
